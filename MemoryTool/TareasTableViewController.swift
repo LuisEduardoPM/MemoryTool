@@ -82,6 +82,15 @@ class TareasTableViewController: UITableViewController {
 
         celda.textLabel?.text = tareas[indexPath.row].titulo
         celda.detailTextLabel?.text = tareas[indexPath.row].lugar
+        
+        if tareas[indexPath.row].estado {
+            celda.accessoryType = UITableViewCell.AccessoryType.checkmark
+        }else {
+            celda.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+            
+        }
+        
+        
 
         return celda
     }
