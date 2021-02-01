@@ -29,7 +29,7 @@ class AuthViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                 
                 if let result = result, error == nil{
-                    self.performSegue(withIdentifier: "verTareas", sender: TareasTableViewController.self)
+                    self.performSegue(withIdentifier: "verMenu", sender: MenuViewController.self)
                 }else{
                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error creando el usuario.", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
@@ -46,7 +46,7 @@ class AuthViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 
                 if let result = result, error == nil{
-                    self.performSegue(withIdentifier: "verTareas", sender: TareasTableViewController.self)
+                    self.performSegue(withIdentifier: "verMenu", sender: MenuViewController.self)
                 }else{
                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error al acceder.", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))

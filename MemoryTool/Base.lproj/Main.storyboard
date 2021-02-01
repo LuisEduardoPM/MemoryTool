@@ -17,24 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UQ-Id-52a">
-                                <rect key="frame" x="43" y="440" width="158" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Tareas"/>
-                                <connections>
-                                    <segue destination="jJH-W1-pa8" kind="show" identifier="verTareas" id="LAg-WX-Pqy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzr-iu-Hqo">
-                                <rect key="frame" x="209" y="444" width="158" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Notas"/>
-                                <connections>
-                                    <segue destination="LY0-Gc-Cbs" kind="show" identifier="verNotas" id="Yfb-hn-uVG"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kdc-rL-jwo">
                                 <rect key="frame" x="20" y="286" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,6 +75,7 @@
                         <outlet property="contraTextField" destination="Kdc-rL-jwo" id="N0N-ol-h8T"/>
                         <outlet property="correoTextField" destination="6g7-go-FZZ" id="tXZ-ln-KrV"/>
                         <outlet property="registrarUIButton" destination="frL-92-GED" id="ciX-rk-fBe"/>
+                        <segue destination="2dR-h9-LpX" kind="show" identifier="verMenu" id="02v-w8-het"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -332,6 +315,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJ4-wG-Gde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3732" y="153"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="Myt-YR-GnR">
+            <objects>
+                <viewController id="2dR-h9-LpX" customClass="MenuViewController" customModule="MemoryTool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TGx-C7-0DM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouy-Oy-CXP">
+                                <rect key="frame" x="113" y="197" width="188" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Tareas"/>
+                                <connections>
+                                    <segue destination="jJH-W1-pa8" kind="show" id="ASC-YM-TkZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKF-5k-hg8">
+                                <rect key="frame" x="113" y="477" width="188" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Notas"/>
+                                <connections>
+                                    <segue destination="LY0-Gc-Cbs" kind="show" id="k65-GN-PJe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6yG-mT-vhX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WTK-lN-jfg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCm-IU-NYL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.5797101449275" y="819.64285714285711"/>
         </scene>
         <!--Tabla Notas View Controller-->
         <scene sceneID="9Cg-0w-soj">
