@@ -32,6 +32,9 @@ class EditarNotaViewController: UIViewController , UIImagePickerControllerDelega
             print("editar \(String(describing: id))")
             tituloTextField?.text = notas[id!].titulo
             contenidoTextArea?.text = notas[id!].contenido
+            if (notas[id!].imagen != nil){
+                imagenImageView.image = UIImage(data: notas[id!].imagen!)
+            }
         } else {
             
             let f = DateFormatter()
@@ -39,9 +42,7 @@ class EditarNotaViewController: UIViewController , UIImagePickerControllerDelega
         }
         
                 
-        if (notas[id!].imagen != nil){
-                    imagenImageView.image = UIImage(data: notas[id!].imagen!)
-                }
+        
         
     }
     
