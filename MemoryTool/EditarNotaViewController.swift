@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreData
-class EditarNotaViewController: UIViewController {
+class EditarNotaViewController: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
     
     @IBOutlet weak var tituloTextField: UITextField!
     @IBOutlet weak var contenidoTextArea: UITextView!
@@ -37,7 +37,28 @@ class EditarNotaViewController: UIViewController {
             let f = DateFormatter()
             f.dateStyle = .short
         }
+        
+                
+        if (notas[id!].imagen != nil){
+                    imagenImageView.image = UIImage(data: notas[id!].imagen!)
+                }
+        
     }
+    
+    @IBAction func seleccionarImagenButton(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+                picker.delegate = self
+                picker.allowsEditing = true
+                picker.sourceType = .photoLibrary
+                present(picker, animated: true)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            guard let userPickedImage = info[.editedImage] as? UIImage else { return }
+            imagenImageView.image = userPickedImage
+            picker.dismiss(animated: true)
+        }
     
     func cargarInfo() {
           
@@ -78,7 +99,7 @@ class EditarNotaViewController: UIViewController {
         //let fecha = FechaTextField.text ?? ""
         notas[id!].setValue(cont, forKey: "contenido")
         notas[id!].setValue(titulo, forKey: "titulo")
-        
+        notas[id!].setValue(imagenImageView.image?.pngData(), forKey: "imagen")
         
         guardarNota()
                 
@@ -89,12 +110,14 @@ class EditarNotaViewController: UIViewController {
         
         guard let titulo = tituloTextField?.text else {return}
         guard let cont = contenidoTextArea?.text  else {return}
+        guard let img = imagenImageView?.image?.pngData() else { return}
         
         
         let nuevaNota = Nota(context: self.contexto)
         
         nuevaNota.titulo = titulo
         nuevaNota.contenido = cont
+        nuevaNota.imagen = img
        
         
         
@@ -106,6 +129,8 @@ class EditarNotaViewController: UIViewController {
         
         
     }
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             self.view.endEditing(true)
         }

@@ -449,6 +449,9 @@
                                 <rect key="frame" x="127" y="592" width="161" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Seleccionar imagen"/>
+                                <connections>
+                                    <action selector="seleccionarImagenButton:" destination="RvG-J3-PPW" eventType="touchUpInside" id="yh3-YK-MeU"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WBN-MK-4vR">
                                 <rect key="frame" x="88" y="647" width="238" height="38"/>
