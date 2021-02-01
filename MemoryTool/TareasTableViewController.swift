@@ -19,13 +19,7 @@ class TareasTableViewController: UITableViewController {
     @IBOutlet var TablaTareas: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.cargarInfo()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         cargarInfo()
@@ -34,9 +28,7 @@ class TareasTableViewController: UITableViewController {
     
     
 
-    @IBAction func agregarTarea(_ sender: UIBarButtonItem) {
-        
-    }
+    
     
     func cargarInfo() {
           
@@ -131,7 +123,9 @@ class TareasTableViewController: UITableViewController {
     
     @IBAction func nuevaTarea(_ sender: UIBarButtonItem) {
         self.opcion = 0
-        performSegue(withIdentifier: "editarTarea", sender: nil)    }
+        performSegue(withIdentifier: "editarTarea", sender: nil)
+        
+    }
     
     /*
     // Override to support conditional editing of the table view.

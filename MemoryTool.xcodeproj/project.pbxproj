@@ -11,6 +11,7 @@
 		0B28A80725C7814300A51528 /* FestivosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B28A80625C7814300A51528 /* FestivosTableViewController.swift */; };
 		0B28A80C25C7854E00A51528 /* Festivos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B28A80B25C7854E00A51528 /* Festivos.swift */; };
 		0B28A81125C7881900A51528 /* FestivoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B28A81025C7881800A51528 /* FestivoRequest.swift */; };
+		0B28A82825C7D46900A51528 /* EditarNotaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B28A82725C7D46900A51528 /* EditarNotaViewController.swift */; };
 		0B3C22E925C5BE3B00A73043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C22E825C5BE3B00A73043 /* AppDelegate.swift */; };
 		0B3C22EB25C5BE3B00A73043 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C22EA25C5BE3B00A73043 /* SceneDelegate.swift */; };
 		0B3C22ED25C5BE3B00A73043 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C22EC25C5BE3B00A73043 /* AuthViewController.swift */; };
@@ -50,6 +51,7 @@
 		0B28A80625C7814300A51528 /* FestivosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivosTableViewController.swift; sourceTree = "<group>"; };
 		0B28A80B25C7854E00A51528 /* Festivos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Festivos.swift; sourceTree = "<group>"; };
 		0B28A81025C7881800A51528 /* FestivoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FestivoRequest.swift; sourceTree = "<group>"; };
+		0B28A82725C7D46900A51528 /* EditarNotaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarNotaViewController.swift; sourceTree = "<group>"; };
 		0B3C22E525C5BE3B00A73043 /* MemoryTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3C22E825C5BE3B00A73043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B3C22EA25C5BE3B00A73043 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				0B28A80625C7814300A51528 /* FestivosTableViewController.swift */,
 				0B28A80B25C7854E00A51528 /* Festivos.swift */,
 				0B28A81025C7881800A51528 /* FestivoRequest.swift */,
+				0B28A82725C7D46900A51528 /* EditarNotaViewController.swift */,
 			);
 			path = MemoryTool;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B28A82825C7D46900A51528 /* EditarNotaViewController.swift in Sources */,
 				0B28A80C25C7854E00A51528 /* Festivos.swift in Sources */,
 				0B3C22ED25C5BE3B00A73043 /* AuthViewController.swift in Sources */,
 				0B3C22E925C5BE3B00A73043 /* AppDelegate.swift in Sources */,
